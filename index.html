@@ -87,14 +87,13 @@
     <div class="container mx-auto text-center">
       <h2 class="text-3xl font-bold mb-8">Entre em Contato</h2>
       <p class="text-lg mb-6">Preencha o formulário abaixo e solicite seu orçamento sem compromisso!</p>
-      <div class="max-w-lg mx-auto">
-        <div class="space-y-4">
-          <input type="text" id="name" placeholder="Seu Nome" class="w-full p-3 border rounded-lg focus:outline-none focus:border-blue-600">
-          
-          <input type="tel" id="phone" placeholder="Seu Telefone" class="w-full p-3 border rounded-lg focus:outline-none focus:border-blue-600">
-          <textarea id="message" placeholder="Sua Mensagem" class="w-full p-3 border rounded-lg focus:outline-none focus:border-blue-600 h-32"></textarea>
-          <button onclick="submitForm()" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700">Enviar Mensagem</button>
-        </div>
+      <div class="max-w-lg mx-auto px-4 sm:px-6 lg:px-8">
+        <form action="https://formspree.io/f/seu-endpoint" method="POST" class="space-y-4">
+          <input type="text" name="name" id="name" placeholder="Seu Nome" class="w-full p-3 border rounded-lg focus:outline-none focus:border-blue-600">
+          <input type="tel" name="phone" id="phone" placeholder="Seu Telefone" class="w-full p-3 border rounded-lg focus:outline-none focus:border-blue-600">
+          <textarea name="message" id="message" placeholder="Sua Mensagem" class="w-full p-3 border rounded-lg focus:outline-none focus:border-blue-600 h-32"></textarea>
+          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700">Enviar Mensagem</button>
+        </form>
       </div>
     </div>
   </section>
