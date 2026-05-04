@@ -1,67 +1,309 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MARFULL Engenharia - Bem-vindo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gere leads qualificados para seu negócio com nossa landing page otimizada para SEO. Transforme visitantes em clientes.">
+    <meta name="keywords" content="leads, geração de leads, landing page, SEO, marketing digital">
+    <meta name="author" content="Seu Nome">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#667eea">
+
+    <!-- Open Graph (Facebook/WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gere Leads Qualificados para Seu Negócio">
+    <meta property="og:description" content="Landing page profissional otimizada para SEO que converte visitantes em leads qualificados.">
+    <meta property="og:url" content="https://seu-dominio.com">
+    <meta property="og:image" content="https://seu-dominio.com/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gere Leads Qualificados">
+    <meta name="twitter:description" content="Landing page profissional para captura de leads">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://seu-dominio.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics (substitua G-XXXXXXXXXX pela sua chave) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Schema.json - Structured Data para Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sua Empresa",
+        "url": "https://seu-dominio.com",
+        "logo": "https://seu-dominio.com/logo.png",
+        "description": "Gere leads qualificados para seu negócio",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "email": "seu-email@dominio.com"
+        }
     }
-  </style>
+    </script>
+
+    <title>Gere Leads Qualificados para Seu Negócio | Landing Page com SEO</title>
 </head>
-<body class="font-sans text-white min-h-screen flex items-center justify-center">
-  <div class="container mx-auto px-6 py-12 text-center max-w-2xl">
-    
-    <!-- Logo -->
-    <div class="mb-12">
-      <img src="imagem/LOGO1.png" alt="Logo MARFULL Engenharia" 
-           class="mx-auto h-24 w-auto drop-shadow-lg">
-    </div>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">🚀 Seu Logo</a>
+                <ul class="nav-links">
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#benefits">Benefícios</a></li>
+                    <li><a href="#form">Formulário</a></li>
+                    <li><a href="#cta">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">
-      Bem-vindo à MARFULL Engenharia
-    </h1>
-    
-    <p class="text-xl md:text-2xl text-blue-100 mb-12">
-      Escolha como deseja continuar:
-    </p>
-
-    <!-- Duas opções principais -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-xl mx-auto">
-      
-      <!-- Botão Site Principal -->
-      <a href="home.html" 
-         class="group bg-white text-blue-700 hover:bg-blue-50 transition-all duration-300 
-                rounded-2xl p-8 shadow-xl hover:shadow-2xl flex flex-col items-center">
-        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-          🏠
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transforme Visitantes em Leads Qualificados</h1>
+                <p>Nossa landing page otimizada para SEO converte visitantes em clientes. Aparça no Google e gere leads automaticamente.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'})">
+                        Gerar Leads Agora
+                    </button>
+                    <a href="#benefits" class="btn btn-secondary">Saiba Mais</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/500x400?text=Leads+Qualificados" alt="Leads Qualificados" loading="lazy">
+            </div>
         </div>
-        <h2 class="text-2xl font-semibold mb-3">Entrar no Site</h2>
-        <p class="text-blue-600 text-center">
-          Conheça nossos serviços de elétrica residencial, automação industrial e IoT
-        </p>
-      </a>
+    </section>
 
-      <!-- Botão Política de Privacidade -->
-      <a href="politica-de-privacidade.html" 
-         class="group bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 
-                transition-all duration-300 rounded-2xl p-8 flex flex-col items-center">
-        <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-          📜
+    <!-- ==================== BENEFÍCIOS ==================== -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2>Por Que Usar Nossa Landing Page?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Otimizado para SEO</h3>
+                    <p>Meta tags, schema.json e estrutura HTML otimizados para aparecer no Google.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>100% Responsivo</h3>
+                    <p>Funciona perfeitamente em mobile, tablet e desktop. Testado em todos os navegadores.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Super Rápido</h3>
+                    <p>Performance otimizada com Lighthouse Score acima de 90. Carrega em menos de 1 segundo.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔒</div>
+                    <h3>Seguro e Confiável</h3>
+                    <p>HTTPS, validação de dados, proteção contra bots e compliance com GDPR/LGPD.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Rastreado</h3>
+                    <p>Google Analytics integrado. Veja conversões, tempo de permanência e muito mais em tempo real.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎨</div>
+                    <h3>Personalizável</h3>
+                    <p>Mude cores, textos e layouts facilmente. Adapte ao seu branding em minutos.</p>
+                </div>
+            </div>
         </div>
-        <h2 class="text-2xl font-semibold mb-3">Política de Privacidade</h2>
-        <p class="text-blue-100 text-center">
-          Saiba como tratamos seus dados pessoais
-        </p>
-      </a>
+    </section>
 
-    </div>
+    <!-- ==================== FORMULÁRIO DE LEADS ==================== -->
+    <section id="form" class="lead-form-section">
+        <div class="form-wrapper">
+            <h2>Capture Seus Leads Agora</h2>
+            <p>Preencha o formulário abaixo e comece a gerar leads qualificados</p>
 
-    <p class="mt-16 text-sm text-blue-200">
-      © 2025 MARFULL ENGENHARIA • Todos os direitos reservados
-    </p>
-  </div>
+            <!-- Formulário -->
+            <form id="leadForm" class="lead-form" novalidate>
+                <!-- Nome -->
+                <div class="form-group">
+                    <label for="name">Nome Completo *</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="João da Silva" 
+                        required
+                        aria-label="Nome Completo"
+                    >
+                    <span class="error-message" id="nameError">Nome deve ter pelo menos 3 caracteres</span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="seu@email.com" 
+                        required
+                        aria-label="Email"
+                    >
+                    <span class="error-message" id="emailError">Email inválido. Use o formato: seu@email.com</span>
+                </div>
+
+                <!-- Telefone -->
+                <div class="form-group">
+                    <label for="phone">Telefone *</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="(11) 98765-4321" 
+                        required
+                        aria-label="Telefone"
+                    >
+                    <span class="error-message" id="phoneError">Telefone deve ter 10 ou 11 dígitos</span>
+                </div>
+
+                <!-- Empresa -->
+                <div class="form-group">
+                    <label for="company">Empresa</label>
+                    <input 
+                        type="text" 
+                        id="company" 
+                        name="company" 
+                        placeholder="Nome da sua empresa"
+                        aria-label="Empresa"
+                    >
+                </div>
+
+                <!-- Mensagem -->
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder="Conte-nos mais sobre seu interesse..." 
+                        rows="4"
+                        aria-label="Mensagem"
+                    ></textarea>
+                </div>
+
+                <!-- Consentimento -->
+                <div class="form-group checkbox">
+                    <input 
+                        type="checkbox" 
+                        id="consent" 
+                        name="consent" 
+                        required
+                        aria-label="Aceitar termos"
+                    >
+                    <label for="consent">
+                        Aceito receber informações e estou ciente da <a href="/privacy.html" target="_blank">Política de Privacidade</a> *
+                    </label>
+                    <span class="error-message" id="consentError">Você deve aceitar os termos para continuar</span>
+                </div>
+
+                <!-- Botão Submit -->
+                <button type="submit" class="btn btn-primary btn-large" id="submitBtn">
+                    Enviar Meu Lead
+                </button>
+
+                <p class="form-note">✓ Seus dados são 100% seguros e protegidos</p>
+            </form>
+
+            <!-- Mensagem de Sucesso -->
+            <div id="successMessage" class="success-message" style="display: none;">
+                <h3>✓ Sucesso!</h3>
+                <p>Obrigado por se registrar. Entraremos em contato em breve!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <h2>Pronto para Transformar Seu Negócio?</h2>
+            <p>Não deixe visitantes passarem despercebidos. Capture leads agora e comece a vender mais!</p>
+            <button class="btn btn-primary" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'})">
+                Gerar Leads Agora
+            </button>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre</h4>
+                    <p>Somos uma plataforma de geração de leads otimizada para SEO. Ajudamos empresas a vender mais.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#benefits">Benefícios</a></li>
+                        <li><a href="#form">Formulário</a></li>
+                        <li><a href="#cta">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy.html">Política de Privacidade</a></li>
+                        <li><a href="/terms.html">Termos de Uso</a></li>
+                        <li><a href="/cookies.html">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📧 Email: <a href="mailto:seu-email@dominio.com">seu-email@dominio.com</a></p>
+                    <p>📱 Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Seu Logo. Todos os direitos reservados.</p>
+                <ul class="footer-links">
+                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a></li>
+                    <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a></li>
+                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+
+    <!-- Noscript fallback -->
+    <noscript>
+        <p>Este site requer JavaScript para funcionar adequadamente. Por favor, ative o JavaScript em seu navegador.</p>
+    </noscript>
 </body>
 </html>
