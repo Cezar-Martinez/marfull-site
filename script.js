@@ -1,14 +1,32 @@
 // ==================== VALIDAÇÃO E CAPTURA DE LEADS ====================
 
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('leadForm');
+    const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
+    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.getElementById('menuToggle');
+
+    // Menu mobile toggle
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Fechar menu ao clicar em um link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
 
     // Event listeners para validação em tempo real
     document.getElementById('name').addEventListener('blur', validateName);
     document.getElementById('email').addEventListener('blur', validateEmail);
     document.getElementById('phone').addEventListener('blur', validatePhone);
     document.getElementById('phone').addEventListener('input', maskPhone);
+    document.getElementById('service').addEventListener('change', validateService);
+    document.getElementById('message').addEventListener('blur', validateMessage);
     document.getElementById('consent').addEventListener('change', validateConsent);
 
     // Submit do formulário
@@ -31,15 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
             name: formData.get('name'),
             email: formData.get('email'),
             phone: formData.get('phone'),
-            company: formData.get('company'),
+            service: formData.get('service'),
             message: formData.get('message'),
             timestamp: new Date().toISOString(),
             userAgent: navigator.userAgent,
-            language: navigator.language
         };
 
         try {
-            // ========== OPÇÃO 1: Formspree (Recomendado) ==========
+            // ========== Formspree ==========
             const response = await fetch('https://formspree.io/f/CHAVE_DO_FORMSPREE', {
                 method: 'POST',
                 headers: {
@@ -52,37 +69,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 showSuccessMessage();
                 form.reset();
                 trackEvent('lead_submitted', 'success');
-                console.log('Lead enviado com sucesso!');
+                console.log('Orçamento enviado com sucesso!');
+                
+                // Redirecionar para WhatsApp após 2 segundos
+                setTimeout(() => {
+                    window.open('https://wa.me/554896843672?text=Enviei%20uma%20solicitação%20de%20orçamento%20pelo%20site', '_blank');
+                }, 2000);
             } else {
-                throw new Error('Erro ao enviar lead');
+                throw new Error('Erro ao enviar');
             }
-
-            // ========== OPÇÃO 2: Backend Próprio (Descomente se necessário) ==========
-            /*
-            const response = await fetch('/api/leads', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            });
-
-            if (response.ok) {
-                showSuccessMessage();
-                form.reset();
-                trackEvent('lead_submitted', 'success');
-            } else {
-                throw new Error('Erro ao enviar lead');
-            }
-            */
 
         } catch (error) {
             console.error('Erro:', error);
-            alert('Erro ao enviar lead. Tente novamente.');
+            alert('Erro ao enviar orçamento. Por favor, tente novamente ou entre em contato pelo WhatsApp.');
             trackEvent('lead_error', error.message);
         } finally {
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Enviar Meu Lead';
+            submitBtn.textContent = 'Solicitar Orçamento';
         }
     });
 });
@@ -123,7 +126,6 @@ function validateEmail() {
 function validatePhone() {
     const phone = document.getElementById('phone');
     const error = document.getElementById('phoneError');
-    // Remove caracteres não numéricos para validação
     const phoneDigits = phone.value.replace(/\D/g, '');
     
     if (phoneDigits.length < 10 || phoneDigits.length > 11) {
@@ -132,6 +134,36 @@ function validatePhone() {
         return false;
     } else {
         phone.classList.remove('error');
+        error.classList.remove('show');
+        return true;
+    }
+}
+
+function validateService() {
+    const service = document.getElementById('service');
+    const error = document.getElementById('serviceError');
+    
+    if (service.value === '') {
+        service.classList.add('error');
+        error.classList.add('show');
+        return false;
+    } else {
+        service.classList.remove('error');
+        error.classList.remove('show');
+        return true;
+    }
+}
+
+function validateMessage() {
+    const message = document.getElementById('message');
+    const error = document.getElementById('messageError');
+    
+    if (message.value.trim().length < 10) {
+        message.classList.add('error');
+        error.classList.add('show');
+        return false;
+    } else {
+        message.classList.remove('error');
         error.classList.remove('show');
         return true;
     }
@@ -151,13 +183,14 @@ function validateConsent() {
 }
 
 function validateForm() {
-    // Validar todos os campos obrigatórios
     const isNameValid = validateName();
     const isEmailValid = validateEmail();
     const isPhoneValid = validatePhone();
+    const isServiceValid = validateService();
+    const isMessageValid = validateMessage();
     const isConsentValid = validateConsent();
     
-    return isNameValid && isEmailValid && isPhoneValid && isConsentValid;
+    return isNameValid && isEmailValid && isPhoneValid && isServiceValid && isMessageValid && isConsentValid;
 }
 
 // ==================== MÁSCARA DE TELEFONE ====================
@@ -183,7 +216,7 @@ function maskPhone(e) {
 // ==================== MENSAGEM DE SUCESSO ====================
 
 function showSuccessMessage() {
-    const form = document.getElementById('leadForm');
+    const form = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
     
     form.style.display = 'none';
@@ -199,41 +232,34 @@ function showSuccessMessage() {
 // ==================== RASTREAMENTO DE EVENTOS ====================
 
 function trackEvent(eventName, eventValue) {
-    // Google Analytics (descomente se configurado)
-    /*
     if (typeof gtag !== 'undefined') {
         gtag('event', eventName, {
             'value': eventValue
         });
     }
-    */
     
-    // Log para debug
     console.log(`Event: ${eventName}, Value: ${eventValue}`);
 }
 
-// ==================== PROTEÇÃO CONTRA BOTS ====================
+// ==================== ANALYTICS ====================
 
-// Honeypot field (campo oculto para bots)
-function addHoneypot() {
-    const honeypot = document.createElement('input');
-    honeypot.type = 'text';
-    honeypot.name = 'website';
-    honeypot.style.display = 'none';
-    document.getElementById('leadForm').appendChild(honeypot);
-}
+// Registrar visualização de seção
+const sections = document.querySelectorAll('section[id]');
+const observerOptions = {
+    threshold: 0.5
+};
 
-// Verificar honeypot no submit
-function checkHoneypot() {
-    const honeypot = document.querySelector('input[name="website"]');
-    if (honeypot && honeypot.value !== '') {
-        console.warn('Bot detectado!');
-        return false;
-    }
-    return true;
-}
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            trackEvent('section_viewed', entry.target.id);
+        }
+    });
+}, observerOptions);
 
-// ==================== ANALYTICS E TRACKING ====================
+sections.forEach(section => {
+    observer.observe(section);
+});
 
 // Registrar tempo na página
 window.addEventListener('load', function() {
@@ -244,30 +270,23 @@ window.addEventListener('load', function() {
 
 // Rastrear quando o usuário sai sem converter
 window.addEventListener('beforeunload', function(e) {
-    const form = document.getElementById('leadForm');
+    const form = document.getElementById('contactForm');
     if (form.style.display !== 'none') {
         trackEvent('user_left_without_converting', 'true');
     }
 });
 
-// Scroll tracking (quando usuário vê o formulário)
-const formSection = document.getElementById('form');
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            trackEvent('form_viewed', 'true');
-            observer.unobserve(entry.target);
-        }
-    });
+// Detectar se a página está sendo visualizada
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        trackEvent('page_hidden', 'true');
+    } else {
+        trackEvent('page_visible', 'true');
+    }
 });
 
-if (formSection) {
-    observer.observe(formSection);
-}
+// ==================== SCROLL SUAVE ==================== 
 
-// ==================== UTILIDADES ====================
-
-// Scroll suave para âncoras
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -281,24 +300,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Detectar se a página está sendo visualizada (tab ativa/inativa)
-document.addEventListener('visibilitychange', function() {
-    if (document.hidden) {
-        trackEvent('page_hidden', 'true');
-    } else {
-        trackEvent('page_visible', 'true');
-    }
-});
-
 // ==================== VERIFICAÇÕES INICIAIS ====================
 
-// Verificar suporte a tecnologias necessárias
 if (!('fetch' in window)) {
     alert('Seu navegador é muito antigo. Por favor, atualize para uma versão recente.');
 }
 
-// Log de ambiente (debug)
-console.log('Leads Form Script Carregado');
+console.log('MARFULL Script Carregado');
 console.log('User Agent:', navigator.userAgent);
-console.log('Language:', navigator.language);
 console.log('Cookie Enabled:', navigator.cookieEnabled);
