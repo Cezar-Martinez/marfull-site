@@ -1,481 +1,424 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <!-- Meta Tags Essenciais -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="MARFULL Engenharia - Soluções profissionais em elétrica residencial, automação industrial e IoT em Santa Catarina. Atendimento 24h com garantia 100%.">
-    <meta name="keywords" content="elétrica residencial, automação industrial, IoT, serviços elétricos, Florianópolis, Camboriú, Itapema, Santa Catarina">
-    <meta name="author" content="MARFULL Engenharia">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0066cc">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MARFULL Engenharia - Especialista em Elétrica Residencial, Automação Industrial e IoT em Santa Catarina. Soluções profissionais, seguras e inovadoras. Orçamento rápido via WhatsApp.">
+  <meta name="keywords" content="elétrica residencial, automação industrial, IoT, CLP, inversores de frequência, automação residencial, Alexa, Florianópolis, Balneário Camboriú, Itapema, Grande Florianópolis">
+  <meta name="author" content="MARFULL Engenharia">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="MARFULL Engenharia - Elétrica, Automação e IoT">
+  <meta property="og:description" content="Soluções profissionais em elétrica residencial, automação industrial e Internet das Coisas. Atendemos Grande Florianópolis e litoral de SC.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marfullengenharia.com.br">
+  <meta property="og:image" content="https://marfullengenharia.com.br/imagem/LOGO1.png">
 
-    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-    <meta property="og:type" content="business.business">
-    <meta property="og:title" content="MARFULL Engenharia - Soluções em Elétrica e IoT">
-    <meta property="og:description" content="Serviços de elétrica residencial, automação industrial e IoT. Atendimento 24h. Garantia 100%.">
-    <meta property="og:url" content="https://seu-dominio.com">
-    <meta property="og:image" content="https://seu-dominio.com/og-image.jpg">
-    <meta property="og:locale" content="pt_BR">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MARFULL Engenharia">
-    <meta name="twitter:description" content="Soluções profissionais em elétrica, automação e IoT">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://seu-dominio.com">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
-    <!-- Schema.json - Local Business -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "MARFULL Engenharia",
-        "image": "https://seu-dominio.com/logo.png",
-        "description": "Soluções em elétrica residencial, automação industrial e IoT",
-        "telephone": "(48) 99684-3672",
-        "email": "contato@marfull.com.br",
-        "url": "https://seu-dominio.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Sua Rua, 123",
-            "addressLocality": "Florianópolis",
-            "addressRegion": "SC",
-            "postalCode": "88000-000",
-            "addressCountry": "BR"
-        },
-        "areaServed": ["Florianópolis", "Balneário Camboriú", "Itapema", "Governador Celso Ramos"],
-        "priceRange": "$$",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "ratingCount": "127"
-        }
+  <title>MARFULL Engenharia | Elétrica Residencial, Automação Industrial e IoT</title>
+  
+  <!-- Tailwind + Custom CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+    
+    :root {
+      --primary: #0e2a5e;
     }
-    </script>
+    
+    .tail-container {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    
+    .heading-font {
+      font-family: 'Space Grotesk', sans-serif;
+    }
 
-    <title>MARFULL Engenharia - Elétrica Residencial, Automação e IoT | SC</title>
+    .hero-bg {
+      background: linear-gradient(rgba(14, 42, 94, 0.85), rgba(14, 42, 94, 0.9)), url('https://images.unsplash.com/photo-1581092580490-6c6e8c6d5e4e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
+    }
+
+    .service-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+    }
+
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #3b82f6;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    .logo-glow {
+      filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.5));
+    }
+  </style>
 </head>
-<body>
-    <!-- ==================== HEADER ==================== -->
-    <header class="header">
-        <nav class="navbar container">
-            <a href="#" class="logo">
-                <img src="imagem/LOGO1.png" alt="MARFULL Engenharia Logo" loading="lazy">
-                <span>MARFULL</span>
-            </a>
+<body class="tail-container bg-zinc-50 text-zinc-900">
 
-            <!-- Menu Toggle -->
-            <button id="menuToggle" class="menu-toggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <!-- Navigation Links -->
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#hero">Início</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#why">Por Que MARFULL</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#testimonials">Depoimentos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-
-            <!-- CTA Button -->
-            <a href="https://wa.me/554896843672?text=Olá%20MARFULL,%20preciso%20de%20um%20orçamento!" target="_blank" rel="noopener noreferrer" class="cta-button">
-                💬 WhatsApp
-            </a>
-        </nav>
-    </header>
-
-    <!-- ==================== HERO SECTION ==================== -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Soluções Profissionais em Elétrica, Automação e IoT</h1>
-                <p>Especialistas em instalação, manutenção e modernização elétrica para residências e indústrias</p>
-                
-                <div class="hero-badges">
-                    <span class="badge">⭐ 4.9 Avaliação</span>
-                    <span class="badge">🕐 Atendimento 24h</span>
-                    <span class="badge">✅ Garantia 100%</span>
-                </div>
-
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        Solicitar Orçamento
-                    </a>
-                    <a href="https://wa.me/554896843672?text=Olá%20MARFULL,%20gostaria%20de%20informações!" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        Falar com Especialista
-                    </a>
-                </div>
-
-                <p class="hero-subtitle">
-                    Atendemos: Florianópolis • Balneário Camboriú • Itapema • Governador Celso Ramos e região
-                </p>
-            </div>
-
-            <div class="hero-image">
-                <img src="https://via.placeholder.com/500x400?text=Equipe+MARFULL" alt="Equipe de profissionais MARFULL" loading="lazy">
-            </div>
+  <!-- Navbar -->
+  <nav class="bg-white border-b border-zinc-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-3">
+        <img src="imagem/LOGO.png" alt="MARFULL Engenharia Logo" class="h-12 w-auto logo-glow">
+        <div>
+          <span class="text-2xl font-bold tracking-tight heading-font text-[#0e2a5e]">MARFULL</span>
+          <span class="block text-xs text-zinc-500 -mt-1">ENGENHARIA</span>
         </div>
-    </section>
+      </a>
 
-    <!-- ==================== SERVIÇOS ==================== -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <p class="section-subtitle">Soluções especializadas para cada necessidade</p>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#home" class="nav-link text-zinc-700 hover:text-blue-600">Início</a>
+        <a href="#services" class="nav-link text-zinc-700 hover:text-blue-600">Serviços</a>
+        <a href="#sobre" class="nav-link text-zinc-700 hover:text-blue-600">Sobre</a>
+        <a href="#projetos" class="nav-link text-zinc-700 hover:text-blue-600">Projetos</a>
+        <a href="#contato" class="nav-link text-zinc-700 hover:text-blue-600">Contato</a>
+      </div>
 
-            <div class="services-grid">
-                <!-- Serviço 1 -->
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>Elétrica Residencial</h3>
-                    <p>Instalações, manutenção e reparos elétricos para sua casa com segurança e eficiência.</p>
-                    <ul class="service-list">
-                        <li>✓ Substituição de chuveiros</li>
-                        <li>✓ Instalação de lâmpadas e lustres</li>
-                        <li>✓ Automação com Alexa</li>
-                        <li>✓ Substituição de fiação antiga</li>
-                        <li>✓ Instalação de quadros elétricos</li>
-                        <li>✓ Fotocélulas e sensores</li>
-                    </ul>
-                    <a href="https://wa.me/554896843672?text=Preciso%20de%20elétrica%20residencial" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Solicitar</a>
-                </div>
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/554896843672?text=Olá!%20Gostaria%20de%20um%20orçamento." 
+           target="_blank"
+           class="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2 transition-all">
+          <i class="fab fa-whatsapp text-lg"></i>
+          <span>WhatsApp</span>
+        </a>
+        <button onclick="toggleMobileMenu()" 
+                class="md:hidden p-2 text-zinc-700">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
 
-                <!-- Serviço 2 -->
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3>Automação Industrial</h3>
-                    <p>Soluções personalizadas para otimizar processos industriais com tecnologia de ponta.</p>
-                    <ul class="service-list">
-                        <li>✓ Inversores de frequência</li>
-                        <li>✓ Controladores Lógicos (CLP)</li>
-                        <li>✓ Quadros elétricos industriais</li>
-                        <li>✓ Otimização de processos</li>
-                        <li>✓ Sensores e periféricos</li>
-                        <li>✓ Manutenção preventiva</li>
-                    </ul>
-                    <a href="https://wa.me/554896843672?text=Preciso%20de%20automação%20industrial" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Solicitar</a>
-                </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+      <div class="px-6 py-6 flex flex-col gap-4 text-lg">
+        <a href="#home" class="py-2">Início</a>
+        <a href="#services" class="py-2">Serviços</a>
+        <a href="#sobre" class="py-2">Sobre Nós</a>
+        <a href="#projetos" class="py-2">Projetos</a>
+        <a href="#contato" class="py-2">Contato</a>
+      </div>
+    </div>
+  </nav>
 
-                <!-- Serviço 3 -->
-                <div class="service-card">
-                    <div class="service-icon">🌐</div>
-                    <h3>Internet das Coisas (IoT)</h3>
-                    <p>Conecte dispositivos e automatize sua casa ou empresa com soluções IoT inovadoras.</p>
-                    <ul class="service-list">
-                        <li>✓ Projetos IoT personalizados</li>
-                        <li>✓ Sensores e módulos</li>
-                        <li>✓ Sistema de monitoramento 24/7</li>
-                        <li>✓ Integração com aplicativos</li>
-                        <li>✓ Suporte técnico contínuo</li>
-                        <li>✓ Consultoria de soluções</li>
-                    </ul>
-                    <a href="https://wa.me/554896843672?text=Preciso%20de%20soluções%20IoT" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Solicitar</a>
-                </div>
-            </div>
+  <!-- Hero -->
+  <section id="home" class="hero-bg text-white py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full mb-6 text-sm">
+          <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+          Atendimento em todo Litoral de Santa Catarina
         </div>
-    </section>
-
-    <!-- ==================== POR QUE MARFULL ==================== -->
-    <section id="why" class="why-marfull">
-        <div class="container">
-            <h2>Por Que Escolher MARFULL?</h2>
-            <p class="section-subtitle">6 razões para confiar em nossos serviços</p>
-
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">👨‍🔧</div>
-                    <h3>Profissionais Qualificados</h3>
-                    <p>Equipe com certificações e anos de experiência no mercado</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">🛡️</div>
-                    <h3>Segurança Garantida</h3>
-                    <p>Cumprimento de todas as normas técnicas de segurança</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">💰</div>
-                    <h3>Preços Competitivos</h3>
-                    <p>Orçamentos transparentes sem cobranças ocultas</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">⏱️</div>
-                    <h3>Atendimento Rápido</h3>
-                    <p>Disponível 24 horas para emergências</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">📋</div>
-                    <h3>Garantia 100%</h3>
-                    <p>Todos os serviços com garantia de satisfação</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">🚀</div>
-                    <h3>Tecnologia de Ponta</h3>
-                    <p>Soluções inovadoras em automação e IoT</p>
-                </div>
-            </div>
+        
+        <h1 class="text-5xl md:text-6xl font-bold heading-font leading-tight mb-6">
+          Serviços de confiança<br>para sua casa e empresa
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-white/90 mb-10">
+          Elétrica Residencial • Automação Industrial • Internet das Coisas (IoT)
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://wa.me/554896843672?text=Olá!%20Preciso%20de%20um%20orçamento%20urgente." 
+             target="_blank"
+             class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg flex items-center justify-center gap-3 transition-all shadow-lg">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            Falar no WhatsApp
+          </a>
+          
+          <a href="#contato" 
+             class="bg-white text-[#0e2a5e] hover:bg-zinc-100 px-8 py-4 rounded-2xl font-semibold text-lg flex items-center justify-center gap-3 transition-all">
+            Solicitar Orçamento
+          </a>
         </div>
-    </section>
-
-    <!-- ==================== SOBRE MARFULL ==================== -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Sobre a MARFULL Engenharia</h2>
-                    <p>Somos uma empresa especializada em soluções integradas de elétrica residencial, automação industrial e Internet das Coisas (IoT). Com anos de experiência e compromisso com a excelência, nossa equipe qualificada entrega projetos seguros, inovadores e personalizados.</p>
-                    
-                    <p>Atuamos em toda a região de Santa Catarina, especialmente no litoral, atendendo Florianópolis, Balneário Camboriú, Itapema, Governador Celso Ramos e proximidades.</p>
-
-                    <h3>Nossa Missão</h3>
-                    <p>Oferecer soluções elétricas e de automação que transformam espaços, melhoram qualidade de vida e otimizam processos produtivos.</p>
-
-                    <h3>Nossos Valores</h3>
-                    <ul class="values-list">
-                        <li>✓ Excelência em qualidade</li>
-                        <li>✓ Integridade profissional</li>
-                        <li>✓ Inovação contínua</li>
-                        <li>✓ Segurança em primeiro lugar</li>
-                        <li>✓ Satisfação do cliente</li>
-                    </ul>
-                </div>
-
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/400x350?text=Sobre+MARFULL" alt="Sobre MARFULL Engenharia" loading="lazy">
-                </div>
-            </div>
+        
+        <div class="mt-12 flex justify-center gap-8 text-sm">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-shield-alt text-green-400"></i>
+            <span>Segurança NR-10</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-clock text-green-400"></i>
+            <span>Atendimento Rápido</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-green-400"></i>
+            <span>Garantia nos Serviços</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- ==================== DEPOIMENTOS ==================== -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>O Que Dizem Nossos Clientes</h2>
-            <p class="section-subtitle">Mais de 100 clientes satisfeitos</p>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Excelente atendimento! Os profissionais foram pontuais, cordiais e realizaram o trabalho com perfeição. Voltarei a contratar com certeza!"</p>
-                    <p class="testimonial-author">— Maria Silva, Florianópolis</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Utilizei para uma reforma completa em minha casa. Superaram minhas expectativas com criatividade e organização. Recomendo muito!"</p>
-                    <p class="testimonial-author">— João Santos, Camboriú</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Profissionais competentes! Resolveram meu problema de automação industrial de forma rápida e eficiente. Muito satisfeito com o resultado."</p>
-                    <p class="testimonial-author">— Carlos Oliveira, Itapema</p>
-                </div>
-            </div>
+  <!-- Services -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-blue-600 font-semibold tracking-widest">ESPECIALIDADES</span>
+        <h2 class="text-4xl font-bold heading-font mt-3">Nossos Serviços</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="service-card bg-white border border-zinc-100 rounded-3xl p-8 shadow-sm">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl mb-6">🏠</div>
+          <h3 class="text-2xl font-semibold mb-4">Elétrica Residencial</h3>
+          <ul class="space-y-3 text-zinc-600">
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Instalações completas e reformas</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Substituição de fiação antiga</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Chuveiros, luminárias e automação Alexa</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Quadros elétricos e DRs</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Manutenção e reparos emergenciais</li>
+          </ul>
         </div>
-    </section>
 
-    <!-- ==================== SEÇÃO CTA ==================== -->
-    <section class="cta-final">
-        <div class="container">
-            <h2>Pronto para Modernizar Seus Sistemas Elétricos?</h2>
-            <p>Entre em contato agora e receba um orçamento gratuito, sem compromisso!</p>
-            <a href="#contact" class="btn btn-light">Solicitar Orçamento Agora</a>
+        <!-- Card 2 -->
+        <div class="service-card bg-white border border-zinc-100 rounded-3xl p-8 shadow-sm">
+          <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-3xl mb-6">🏭</div>
+          <h3 class="text-2xl font-semibold mb-4">Automação Industrial</h3>
+          <ul class="space-y-3 text-zinc-600">
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> CLP (Controladores Lógicos Programáveis)</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Inversores de Frequência</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Projetos de quadros elétricos</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Sensores e instrumentação</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Otimização de processos</li>
+          </ul>
         </div>
-    </section>
 
-    <!-- ==================== FORMULÁRIO DE CONTATO ==================== -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Solicite Seu Orçamento</h2>
-            <p class="section-subtitle">Preencha o formulário e entraremos em contato em breve</p>
-
-            <div class="contact-wrapper">
-                <!-- Formulário -->
-                <form id="contactForm" class="contact-form" novalidate>
-                    <div class="form-group">
-                        <label for="name">Nome Completo *</label>
-                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
-                        <span class="error-message" id="nameError">Nome deve ter pelo menos 3 caracteres</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                        <span class="error-message" id="emailError">Email inválido</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Telefone/WhatsApp *</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(11) 98765-4321" required>
-                        <span class="error-message" id="phoneError">Telefone deve ter 10 ou 11 dígitos</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="service">Serviço de Interesse *</label>
-                        <select id="service" name="service" required>
-                            <option value="">Selecione um serviço</option>
-                            <option value="residencial">Elétrica Residencial</option>
-                            <option value="industrial">Automação Industrial</option>
-                            <option value="iot">Internet das Coisas (IoT)</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                        <span class="error-message" id="serviceError">Selecione um serviço</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Descreva Sua Necessidade *</label>
-                        <textarea id="message" name="message" placeholder="Conte-nos sobre seu projeto..." rows="5" required></textarea>
-                        <span class="error-message" id="messageError">Descrição deve ter pelo menos 10 caracteres</span>
-                    </div>
-
-                    <div class="form-group checkbox">
-                        <input type="checkbox" id="consent" name="consent" required>
-                        <label for="consent">Aceito a <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> e desejo receber contato *</label>
-                        <span class="error-message" id="consentError">Você deve aceitar os termos</span>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-large" id="submitBtn">
-                        Solicitar Orçamento
-                    </button>
-
-                    <p class="form-note">✓ Seus dados são 100% seguros e protegidos</p>
-                </form>
-
-                <!-- Mensagem de Sucesso -->
-                <div id="successMessage" class="success-message" style="display: none;">
-                    <h3>✓ Sucesso!</h3>
-                    <p>Obrigado! Recebemos sua solicitação. Em breve um especialista entrará em contato.</p>
-                    <p style="margin-top: 20px; font-size: 14px;">Enquanto isso, você pode nos chamar no WhatsApp →</p>
-                </div>
-
-                <!-- Informações de Contato -->
-                <div class="contact-info">
-                    <h3>Informações de Contato</h3>
-                    
-                    <div class="info-item">
-                        <span class="info-icon">📱</span>
-                        <div>
-                            <p><strong>WhatsApp</strong></p>
-                            <a href="https://wa.me/554896843672" target="_blank" rel="noopener noreferrer">(48) 99684-3672</a>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <span class="info-icon">📧</span>
-                        <div>
-                            <p><strong>Email</strong></p>
-                            <a href="mailto:contato@marfull.com.br">contato@marfull.com.br</a>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <span class="info-icon">🕐</span>
-                        <div>
-                            <p><strong>Atendimento</strong></p>
-                            <p>Segunda a Domingo<br>7:00 AM - 11:00 PM</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <span class="info-icon">📍</span>
-                        <div>
-                            <p><strong>Região de Atendimento</strong></p>
-                            <p>Florianópolis, Camboriú,<br>Itapema, Governador Celso Ramos</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Card 3 -->
+        <div class="service-card bg-white border border-zinc-100 rounded-3xl p-8 shadow-sm">
+          <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-3xl mb-6">🌐</div>
+          <h3 class="text-2xl font-semibold mb-4">Internet das Coisas (IoT)</h3>
+          <ul class="space-y-3 text-zinc-600">
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Projetos personalizados IoT</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Monitoramento remoto</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Automação residencial inteligente</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Integração com Alexa e Google Home</li>
+            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-0.5"></i> Sensores e dashboards</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>MARFULL Engenharia</h4>
-                    <p>Soluções profissionais em elétrica, automação e IoT para residências e indústrias em Santa Catarina.</p>
-                </div>
+  <!-- Trust Bar -->
+  <div class="bg-zinc-900 py-6 text-white">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-3xl font-bold text-blue-400">+17</div>
+        <div class="text-sm text-zinc-400">Anos de Experiência</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold text-blue-400">100%</div>
+        <div class="text-sm text-zinc-400">Satisfação dos Clientes</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold text-blue-400">NR-10</div>
+        <div class="text-sm text-zinc-400">Equipe Certificada</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold text-blue-400">24h</div>
+        <div class="text-sm text-zinc-400">Atendimento de Emergência</div>
+      </div>
+    </div>
+  </div>
 
-                <div class="footer-section">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="#hero">Início</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#contact">Contato</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Informações</h4>
-                    <ul>
-                        <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
-                        <li><a href="https://wa.me/554896843672" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-                        <li><a href="mailto:contato@marfull.com.br">Email</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Redes Sociais</h4>
-                    <ul>
-                        <li><a href="#" aria-label="Facebook">Facebook</a></li>
-                        <li><a href="#" aria-label="Instagram">Instagram</a></li>
-                        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 MARFULL ENGENHARIA. Todos os direitos reservados.</p>
-                <p>Desenvolvido com ❤️ para sua confiança</p>
-            </div>
+  <!-- About -->
+  <section id="sobre" class="py-20 bg-zinc-100">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <img src="imagem/servicos.jpg"
+             alt="Equipe MARFULL Engenharia trabalhando" 
+             class="rounded-3xl shadow-xl w-full">
+      </div>
+      <div>
+        <h2 class="text-4xl font-bold heading-font mb-6">Profissionalismo e Confiança</h2>
+        <p class="text-lg text-zinc-600 mb-6">
+          A MARFULL Engenharia é especializada em entregar soluções elétricas e de automação com excelência técnica e alto padrão de segurança. 
+          Atuamos com transparência, pontualidade e responsabilidade em todo o Litoral de Santa Catarina.
+        </p>
+        <ul class="space-y-4">
+          <li class="flex gap-4"><i class="fas fa-check-circle text-green-500 text-xl"></i> <span>Equipe técnica altamente qualificada</span></li>
+          <li class="flex gap-4"><i class="fas fa-check-circle text-green-500 text-xl"></i> <span>Projetos executados com materiais de primeira linha</span></li>
+          <li class="flex gap-4"><i class="fas fa-check-circle text-green-500 text-xl"></i> <span>Garantia estendida nos serviços</span></li>
+          <li class="flex gap-4"><i class="fas fa-check-circle text-green-500 text-xl"></i> <span>Atendimento personalizado</span></li>
+        </ul>
+        <div class="mt-10">
+          <a href="#contato" class="inline-flex items-center gap-3 bg-[#0e2a5e] text-white px-8 py-4 rounded-2xl font-semibold">
+            Conheça nossa história
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <!-- ==================== BOTÃO WHATSAPP FLUTUANTE ==================== -->
-    <a href="https://wa.me/554896843672?text=Olá%20MARFULL,%20gostaria%20de%20informações!" target="_blank" rel="noopener noreferrer" class="whatsapp-button" aria-label="Abrir WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.325 0-2.619.321-3.809.943l-.273.16-.283-.054c-.972-.188-1.902-.512-2.759-.99l1.622 5.029c-.418 1.165-.674 2.406-.674 3.737 0 5.76 4.818 10.578 10.578 10.578 2.848 0 5.535-1.236 7.413-3.413 1.878-2.177 2.914-5.09 2.914-8.165 0-5.76-4.818-10.578-10.578-10.578"/>
-        </svg>
-        <span>Fale Agora</span>
-    </a>
+  <!-- Contact + Form -->
+  <section id="contato" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-4xl font-bold heading-font mb-6">Vamos conversar sobre seu projeto?</h2>
+          <p class="text-zinc-600 text-lg mb-8">
+            Preencha o formulário ou fale diretamente com um de nossos profissionais pelo WhatsApp. 
+            Resposta em até 30 minutos em dias úteis.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-center gap-4">
+              <i class="fas fa-phone text-2xl text-blue-600"></i>
+              <div>
+                <div class="font-semibold">(48) 99684-3672</div>
+                <div class="text-sm text-zinc-500">WhatsApp e Ligação</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <i class="fas fa-map-marker-alt text-2xl text-blue-600"></i>
+              <div>
+                <div class="font-semibold">Grande Florianópolis e Litoral</div>
+                <div class="text-sm text-zinc-500">Governador Celso Ramos, Itapema, Balneário Camboriú e região</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <!-- ==================== SCRIPTS ==================== -->
-    <script src="script.js" defer></script>
+        <!-- Lead Form -->
+        <form id="leadForm" class="space-y-6 bg-zinc-50 p-8 rounded-3xl">
+          <div>
+            <label class="block text-sm font-medium mb-2">Nome completo</label>
+            <input type="text" id="nome" required
+                   class="w-full px-5 py-4 rounded-2xl border border-zinc-200 focus:border-blue-600 focus:ring-0 outline-none">
+          </div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium mb-2">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" required
+                     class="w-full px-5 py-4 rounded-2xl border border-zinc-200 focus:border-blue-600 focus:ring-0 outline-none">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Cidade</label>
+              <input type="text" id="cidade" 
+                     class="w-full px-5 py-4 rounded-2xl border border-zinc-200 focus:border-blue-600 focus:ring-0 outline-none">
+            </div>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium mb-2">Descreva seu projeto ou necessidade</label>
+            <textarea id="mensagem" rows="5" required
+                      class="w-full px-5 py-4 rounded-3xl border border-zinc-200 focus:border-blue-600 focus:ring-0 outline-none"></textarea>
+          </div>
+          
+          <button type="submit"
+                  class="w-full bg-[#0e2a5e] hover:bg-blue-800 text-white font-semibold py-5 rounded-2xl text-lg transition-all flex items-center justify-center gap-3">
+            <span>ENVIAR MENSAGEM</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <noscript>
-        <p>Este site requer JavaScript. Por favor, ative-o no seu navegador.</p>
-    </noscript>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/554896843672?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20um%20orçamento." 
+     target="_blank"
+     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-2xl flex items-center gap-3 z-50 text-lg font-medium">
+    <i class="fab fa-whatsapp text-3xl"></i>
+    <span class="hidden md:block">Falar agora</span>
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-900 text-zinc-400 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+      <div>
+        <img src="imagem/LOGO.png" alt="MARFULL" class="h-12 mb-4 brightness-125">
+        <p class="text-sm">Engenharia elétrica e automação com foco em qualidade, segurança e inovação.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Links Rápidos</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#services" class="hover:text-white">Serviços</a></li>
+          <li><a href="#sobre" class="hover:text-white">Sobre Nós</a></li>
+          <li><a href="#contato" class="hover:text-white">Orçamento</a></li>
+          <li><a href="politica-de-privacidade.html" class="hover:text-white">Política de Privacidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Contato</h4>
+        <p class="text-sm">(48) 99684-3672</p>
+        <p class="text-sm">contato@marfullengenharia.com.br</p>
+        <p class="text-xs mt-6">© 2026 MARFULL ENGENHARIA. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Tailwind script already loaded
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Form submission - opens WhatsApp with data
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+      const cidade = document.getElementById('cidade').value;
+      const mensagem = document.getElementById('mensagem').value;
+      
+      const texto = `Olá! Meu nome é *${nome}*${cidade ? ` de ${cidade}` : ''}.%0A%0A${encodeURIComponent(mensagem)}%0A%0AMeu contato: ${telefone}`;
+      
+      window.open(`https://wa.me/554896843672?text=${texto}`, '_blank');
+      
+      // Feedback
+      const btn = this.querySelector('button');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '✅ Enviado! Abrindo WhatsApp...';
+      btn.disabled = true;
+      
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        this.reset();
+      }, 3000);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('href') !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
